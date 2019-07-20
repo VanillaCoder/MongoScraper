@@ -11,13 +11,12 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 3000;
 
 // Initialize Express
 var app = express();
 
 // Configure middleware
-
+var PORT = process.env.PORT || 3000
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
