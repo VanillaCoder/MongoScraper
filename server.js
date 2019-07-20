@@ -1,5 +1,6 @@
 var express = require("express");
 var mongoose = require("mongoose");
+var path = require("path");
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
@@ -28,6 +29,7 @@ mongoose.connect("mongodb://localhost/mongoScraper", { useNewUrlParser: true });
 
 //routes
 require("./routes/apiRoutes")(app);
+// require("./routes/htmlRoutes")(app);
 
 // Start the server
 app.listen(PORT, function() {
